@@ -308,6 +308,7 @@ class CustomDialog extends StatelessWidget {
   final BoxConstraints constraints;
 
   Color _getColor(BuildContext context) {
+    // ignore: deprecated_member_use
     return Theme.of(context).dialogBackgroundColor;
   }
 
@@ -318,7 +319,7 @@ class CustomDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final DialogTheme dialogTheme = DialogTheme.of(context);
+    final DialogThemeData dialogTheme = DialogTheme.of(context);
     return AnimatedPadding(
       padding: MediaQuery.of(context).viewInsets +
           const EdgeInsets.symmetric(horizontal: 22.0, vertical: 24.0),
